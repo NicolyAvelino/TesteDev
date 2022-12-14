@@ -1,0 +1,863 @@
+/* ================ STYLE AGENT ================ */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+/* ================ GERAL ================ */
+
+body > * {
+	font-family: "Trade Gothic LT Std";
+}
+
+.container {
+	max-width: 1086px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.grid {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.background__img {
+	background: url(../images/bg.png) no-repeat center;
+	position: fixed;
+	height: 1163px;
+	width: 907px;
+	z-index: -1;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+strong {
+	font-weight: 700;
+}
+
+p {
+	margin: 0;
+}
+
+@media screen and (max-width: 1086px) {
+	.container {
+		max-width: 768px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		margin-right: 1.5rem;
+		margin-left: 1.5rem;
+	}
+
+	.background__img {
+		width: 870px;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.container {
+		/* max-width: 90%; */
+	}
+
+	.background__img {
+		background-size: contain;
+		height: 563px;
+		width: 370px;
+	}
+}
+
+/* ================ HEADER ================ */
+
+.header {
+	width: 100%;
+	background-color: black;
+}
+
+.header__container {
+	height: 4.6875rem;
+	max-width: 1086px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header__title {
+	color: #fff;
+	font-size: 1.625rem;
+	font-weight: 500;
+}
+
+.header__list {
+	grid-template-columns: repeat(7, max-content);
+	gap: 2rem;
+	align-items: center;
+}
+
+@keyframes slide {
+	from {
+		background-position-x: 0;
+	}
+	to {
+		background-position-x: -5000%;
+	}
+}
+
+.header__content {
+	width: 100%;
+	height: 26px;
+	background-image: url(../images/elegante.svg);
+	background-repeat: repeat;
+	background-size: auto;
+	animation: 10s slide linear infinite;
+	font-family: "Trade Gothic LT Std";
+}
+
+@media screen and (max-width: 768px) {
+	@keyframes slide {
+		from {
+			background-position-x: 0;
+		}
+		to {
+			background-position-x: -2500%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.header__content {
+		animation: 200s slide linear infinite;
+		font-family: "Trade Gothic LT Std";
+	}
+}
+
+/* ================ CARTEIRO ================ */
+
+.carteiro {
+	padding-top: .2rem;	
+}
+
+.carteiro__container {
+	grid-template-columns: repeat(2, max-content);
+	grid-gap: 3rem;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;	
+}
+
+.carteiro__data {
+	position: relative;
+}
+.dialogue_1{
+	width: 30rem;
+}
+.grilo_carteiro_1 {
+	width: 12rem;
+	margin-top: 15rem;
+	animation: side 2s infinite linear;
+}
+
+@keyframes side {
+	0% {
+		transform: rotate(3deg);
+	}
+	9% {
+		transform: rotate(3deg);
+	}
+	10% {
+		transform: rotate(0deg);
+	}
+	19% {
+		transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(3deg);
+	}
+	29% {
+		transform: rotate(3deg);
+	}
+	30% {
+		transform: rotate(0deg);
+	}
+}
+
+.carteiro__text {
+	position: absolute;
+	top: 3em;
+	left: 3.5em;
+}
+
+.carteiro__p {
+	font-size: 1.8rem;
+	font-family: "Trade Gothic LT Std Extended";
+}
+
+@media screen and (max-width: 1086px) {
+	.carteiro_container {
+		grid-gap: 1rem;
+	}
+
+	.grilo_carteiro_1 {
+		width: 240px;
+	}
+
+	.dialogue_1 {
+		width: 460px;
+	}
+
+	.carteiro__p {
+		font-size: 1.5125rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.grilo_carteiro_1 {
+		width: 140px;
+	}
+
+	.dialogue_1 {
+		width: 356px;
+	}
+
+	.carteiro__p {
+		font-size: 1.1rem;
+	}
+
+	.carteiro__text {
+		position: absolute;
+		top: 2.5em;
+		left: 3em;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.carteiro__container {
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+	}
+
+	.grilo_carteiro_1 {
+		grid-row: 2;
+		grid-column: 1/-1;
+		margin-top: 0;
+		justify-self: center;
+	}
+
+	.dialogue_1 {
+		grid-row: 1;
+		grid-column: 1/-1;
+		width: 380px;
+	}
+
+	.carteiro__p {
+		font-size: 1.1125rem;
+	}
+
+	.carteiro__text {
+		top: 2.5em;
+	}
+}
+
+/* ================ QUETAL / COMO ================ */
+.quetalcomo{
+	background-color: #B9C300;
+}
+.quetalcomo__container {
+	padding: 4rem 0.5rem;
+	grid-template-columns: repeat(2, max-content);
+	grid-gap: 5rem;
+	align-items: center;
+	justify-content: center;
+	height: 70vh;	
+}
+
+.quetal{
+	padding: 5rem 2rem;
+	text-align: center;
+	border-radius: 1rem;
+	border: .3rem solid #000;
+}
+.quetal__p {
+	margin-top: 1rem;
+	font-size: 1.2rem;
+}
+.quetal_texto{
+	width: 18rem;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+.quetal__p strong {
+	font-family: "Trade Gothic LT Std 2";
+}
+
+
+@media screen and (max-width: 768px) {
+	.quetal__container {
+		grid-template-columns: 1fr 0.5fr;
+		grid-gap: 4em;
+		align-items: center;
+	}
+
+	.quetal__p br {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.quetal__container {
+		grid-template-columns: 1fr 0.2fr;
+		grid-gap: 1rem;
+	}
+
+	.quetal__p {
+		font-size: 1.25rem;
+	}
+
+	.quetal__p br {
+		display: none;
+	}
+}
+
+.quetal img {
+	/* animation: rock 0.15s infinite alternate; */
+}
+
+@keyframes rock {
+	100% {
+		transform: rotate3d(1, 0, 0, -30deg);
+	}
+}
+
+.como__title {
+	font-size: 4rem;
+	margin-bottom: 4rem;
+	font-family: "Trade Gothic LT Std Extended";
+}
+
+.como__p {
+	font-size: 1.5rem;
+	text-align: justify;
+}
+.texto{
+	width: 36rem;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+@media screen and (max-width: 1086px) {
+	.como__p br {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.como__title {
+		font-size: 1.25rem;
+	}
+
+	.como__p {
+		font-size: 1.25rem;
+	}
+}
+
+/* ================ BORA / FORM================ */
+
+.boraform__container{
+	grid-template-columns: repeat(2, max-content);
+	align-items: start;
+	justify-content: space-between;
+	height: 100vh;
+	padding: 4rem 3rem 0rem 3rem;
+	
+}
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	19% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(-2px);
+	}
+	39% {
+		transform: translateY(-2px);
+	}
+	40% {
+		transform: translateY(-4px);
+	}
+	59% {
+		transform: translateY(-4px);
+	}
+	60% {
+		transform: translateY(-6px);
+	}
+	79% {
+		transform: translateY(-6px);
+	}
+	80% {
+		transform: translateY(-8px);
+	}
+	99% {
+		transform: translateY(-8px);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
+.bora__title {
+	font-size: 4rem;
+	margin-bottom: 3rem;
+}
+
+.bora__p {
+	font-size: 1.4rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	font-family: "Trade Gothic LT Std Extended";
+}
+
+@media screen and (max-width: 1086px) {
+	.bora__grid {
+		grid-column: 2/12;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.bora__p {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.bora__grid {
+		grid-column: 1/-1;
+	}
+
+	.bora__box:after {
+		top: -160px;
+		right: 20px;
+	}
+}
+
+/* ================ LOADING ================ */
+
+.loading img {
+	width: 2rem;
+}
+
+.loading_icons img:nth-of-type(1),
+.loading_icons img:nth-of-type(3) {
+	animation: jump1 1s infinite linear;
+}
+
+@keyframes jump1 {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.loading_icons img:nth-of-type(2) {
+	animation: jump2 1s infinite linear;
+}
+
+@keyframes jump2 {
+	0% {
+		transform: translateY(-5px);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-5px);
+	}
+}
+
+/* ================ FORM ================ */
+
+.form__inputs {
+	grid-gap: .5rem;
+}
+
+.form__fill {
+	background: #fff;
+	border-radius: 1rem;
+	box-shadow: 0 8px 56px #00000015;
+	padding: 2rem 3rem;
+}
+
+.form__label {
+	font-family: "Trade Gothic LT Std Extended";
+	font-size: 1rem;
+}
+
+.form__input {
+	width: 100%;
+	border-radius: .5rem;
+	border: 1px solid black;
+	padding: .5rem .5rem;
+	margin-top: .2rem;
+	margin-bottom: .5rem;
+	font-family: "Trade Gothic LT Std";
+	font-size: 1rem;
+}
+
+.form__textarea {
+	border-radius: .5rem;
+	font-size: 1rem;
+	padding: .5rem .5rem;
+	resize: none;
+	width: 100%;
+	font-family: "Trade Gothic LT Std";
+}
+.form__button {
+	background: black;
+	border-radius: .5rem;
+	color: white;
+	text-decoration: none;
+	font-size: 1.25rem;
+	grid-column: 1/6;
+	font-family: "Trade Gothic LT Std Extended";
+	padding: 0.7rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid black;
+	transition: 0.3s;
+	width: 50%;
+}
+
+.form__button:hover {
+	background: white;
+	border: 1px solid black;
+	color: black;
+}
+
+.form__button:hover img {
+	filter: invert(100%);
+	animation: point 0.3s infinite alternate;
+}
+
+.form__error {
+	border-color: red;
+}
+
+.form__aviso {
+	display: none;
+	font-size: 1rem;
+}
+
+.form__aviso-error {
+	display: block;
+	color: red;
+}
+
+@keyframes point {
+	0% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(5px);
+	}
+}
+
+.icon_letter {
+	grid-column: 6/8;
+	justify-self: flex-end;
+}
+
+.anim_letter {
+	animation: send 3s linear;
+}
+
+.anim_letter.rotate {
+	transform: rotate(30deg);
+}
+
+@keyframes send {
+	0% {
+		transform: translateX(0px) rotate(0deg);
+	}
+	100% {
+		transform: translateX(1000px) rotate(-30deg);
+	}
+}
+
+.form__counter {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+@media screen and (max-width: 1086px) {
+	.form__fill {
+		padding: 3rem 6rem 3rem 3rem;
+	}
+}
+
+@media screen and (max-width: 1086px) {
+	.form__button {
+		grid-column: 1/10;
+	}
+
+	.icon_letter {
+		grid-column: 10/-1;
+		justify-self: flex-end;
+	}
+
+	.form__fill {
+		padding: 3rem 3rem 3rem 1rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.form__button {
+		grid-column: 1/6;
+	}
+
+	.icon_letter {
+		grid-column: 6/-1;
+		justify-self: flex-start;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.form__button {
+		grid-column: 1/10;
+	}
+
+	.icon_letter {
+		grid-column: 10/-1;
+		justify-self: flex-start;
+	}
+}
+
+
+/* ================ PARTICIPE ================ */
+
+.participe {
+	padding: 3rem 0;
+	background-color: #000;
+}
+
+.participe__container {
+	grid-template-columns: repeat(12, 1fr);
+	height: 30vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.participe__box {
+	padding: 0.8rem 0;
+	grid-column: 2/12;
+	
+}
+
+.participe__p {
+	font-size: 1.6875rem;
+	color: #fff;
+	text-align: center;
+}
+
+.participe__p strong {
+	font-family: "Trade Gothic LT Std Extended";
+}
+
+@media screen and (max-width: 1086px) {
+	.participe__box {
+		grid-column: 1/-1;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.participe__p {
+		font-size: 1.4rem;
+		color: white;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.participe__p {
+		font-size: 1rem;
+	}
+}
+
+/* ================ FOOTER ================ */
+
+.footer {
+	padding: 3rem 0;
+}
+
+.footer__container {
+	text-align: center;
+}
+
+.link_hc {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.link_hc img {
+	margin: 5px 0;
+}
+
+.grilo_house {
+	animation: updown 2s infinite alternate;
+}
+
+@keyframes updown {
+	0% {
+		transform: translateY(0);
+	}
+	29% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(-5px);
+	}
+	34% {
+		transform: translateY(-5px);
+	}
+	35% {
+		transform: translateY(0);
+	}
+	49% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	54% {
+		transform: translateY(-5px);
+	}
+	55% {
+		transform: translateY(0);
+	}
+}
+
+/* ================ MODAL ================ */
+
+.sent__modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: white;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0 1rem;
+	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+}
+
+.active-modal {
+	opacity: 1;
+	visibility: visible;
+}
+
+.sent__modal-content {
+	width: 744px;
+	position: relative;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(181, 189, 0, 1) 40%
+	);
+	padding: 7rem 0;
+}
+
+.sent__modal-close {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	font-size: 1.5rem;
+	color: var(--first-color);
+	cursor: pointer;
+}
+
+.sent__modal-text {
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 1rem;
+	align-items: center;
+}
+
+.sent__modal-text img {
+	grid-column: 1/6;
+	justify-self: center;
+}
+
+.modal__data {
+	grid-column: 6/-1;
+	justify-self: center;
+	position: relative;
+}
+
+.modal__text {
+	position: absolute;
+	top: 1rem;
+	left: 2.5rem;
+}
+
+.modal__p {
+	font-family: "Trade Gothic LT Std Extended";
+	font-size: 1.25rem;
+	color: white;
+}
+
+.grilo_carteiro_2 {
+	animation: side 2s infinite linear;
+}
+
+@media screen and (max-width: 568px) {
+	.sent__modal-content {
+		background: rgb(255, 255, 255);
+		background: linear-gradient(
+			360deg,
+			rgba(255, 255, 255, 1) 51%,
+			rgba(181, 189, 0, 1) 51%
+		);
+	}
+
+	.sent__modal-text img {
+		grid-column: 1/-1;
+		grid-row: 2;
+	}
+
+	.modal__data {
+		grid-column: 1/-1;
+	}
+}

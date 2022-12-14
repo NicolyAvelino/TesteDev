@@ -1,0 +1,93 @@
+/* ================ MODAL ================ */
+
+const modalView = document.getElementById('modalSent'),
+	modalBtn = document.getElementById('formSend'),
+	modalClose = document.getElementById('modalClose'),
+	letter = document.getElementById('letter'),
+	iconArrow = document.getElementById('iconArrow'),
+	formTxtarea = document.getElementById('msg'),
+	formInputs = document.querySelectorAll('#rem, #dest, #email'),
+	formEmail = document.getElementById('email'),
+	formAviso = document.getElementById('formAviso')
+
+/* ================ TEXTO BOTÃO + ABRE MODAL ================ */
+
+modalBtn.addEventListener('click', () => {
+})
+
+modalClose.addEventListener('click', () => {
+	modalView.classList.remove('active-modal')
+	formInputs.forEach(formInput => {
+		formInput.value = ''
+	})
+	formTxtarea.value = ''
+})
+
+/* ================ ANIMAÇÃO CARTA ================ */
+
+modalBtn.addEventListener('click', () => {
+
+	event.preventDefault()
+	var form = new FormData(document.getElementById('send-form'));
+	if (formInputs[2].value.includes('@housecricket.com.br')) {
+		formEmail.classList.remove('form__error')
+		formAviso.classList.remove('form__aviso-error')
+		modalBtn.textContent = "ENVIANDO..."
+		modalBtn.append(iconArrow)
+		window.setTimeout(function () {
+			modalView.classList.add('active-modal')
+			modalBtn.textContent = "ENVIAR"
+			modalBtn.append(iconArrow)
+		}, 6000)
+
+		// console.log(form);
+		// fetch("/cadastro.php", {
+		// 	method: "POST",
+		// 	body: form
+		// })
+		// 	.then(function (response) {
+				//console.log(response.ok);
+				// if (!response.ok) {
+				// 	throw new Error(`HTTP error! status: ${response.status}`);
+				// } else {
+					letter.classList.add('anim_letter')
+					window.setTimeout(function () {
+						letter.classList.remove('anim_letter')
+					}, 3000)
+				// }
+
+			// });
+	} else {
+		formEmail.classList.add('form__error')
+		formAviso.classList.add('form__aviso-error')
+	}
+
+})
+
+/* ================ CONTADOR TEXTAREA ================ */
+
+const textarea = document.getElementById('msg'),
+	spanMaxLength = document.getElementById('max'),
+	spancurrentLength = document.getElementById('current')
+
+textarea.addEventListener('input', ({ currentTarget: target }) => {
+	const maxLength = target.getAttribute('maxlength')
+	const currentLength = target.value.length
+
+	spancurrentLength.textContent = currentLength
+	spanMaxLength.textContent = maxLength
+})
+
+/* ================ VALIDAÇÃO INPUTS ================ */
+
+formInputs[0].addEventListener('keyup', () => {
+	console.log(formInputs[0].value)
+	formInputs[0].value = formInputs[0].value.normalize("NFD").replace(/[^a-zA-Zs ]/g, "");
+})
+
+/* ================ VALIDAÇÃO EMAIL ================ */
+
+function validaEmail() {
+	if (formInputs[2].value.includes('@housecricket.com.br')) console.log('ez')
+	else console.log('f')
+}

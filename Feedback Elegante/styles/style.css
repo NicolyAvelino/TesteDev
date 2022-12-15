@@ -29,13 +29,16 @@ body > * {
 	margin-right: auto;
 }
 
+.destaque{
+	color: #B9C300;
+}
 .grid {
 	display: grid;
 	gap: 1.5rem;
 }
 
 .background__img {
-	background: url(../images/bg.png) no-repeat center;
+	background: url("../Feedback_Elegante_img/elegante.svg") no-repeat center;
 	position: fixed;
 	height: 1163px;
 	width: 907px;
@@ -276,39 +279,25 @@ p {
 	}
 }
 
-/* ================ QUETAL / COMO ================ */
-.quetalcomo{
-	background-color: #B9C300;
-}
-.quetalcomo__container {
-	padding: 4rem 0.5rem;
-	grid-template-columns: repeat(2, max-content);
-	grid-gap: 5rem;
-	align-items: center;
-	justify-content: center;
-	height: 70vh;	
+/* ================ QUETAL ================ */
+
+.quetal {
+	padding: 2.5rem 0 3rem;
+	background-color: #000;
+	color: #fff;
 }
 
-.quetal{
-	padding: 5rem 2rem;
+.quetal__container {
+	display: grid;
+    gap: 1.5rem;
+    justify-items: center;
 	text-align: center;
-	border-radius: 1rem;
-	border: .3rem solid #000;
-}
-.quetal__p {
-	margin-top: 1rem;
-	font-size: 1.2rem;
-}
-.quetal_texto{
-	width: 18rem;
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	word-break: break-word;
-}
-.quetal__p strong {
-	font-family: "Trade Gothic LT Std 2";
 }
 
+.quetal__p {
+	font-size: 1.5rem;
+	font-family: Helvetica;
+}
 
 @media screen and (max-width: 768px) {
 	.quetal__container {
@@ -347,6 +336,17 @@ p {
 	}
 }
 
+/* ================ COMO ================ */
+
+.como__container {
+	padding: 4rem 0.5rem;
+	grid-template-columns: repeat(2, max-content);
+	grid-gap: 5rem;
+	align-items:center;
+	justify-content:space-around;
+	height: 70vh;	
+}
+
 .como__title {
 	font-size: 4rem;
 	margin-bottom: 4rem;
@@ -354,8 +354,9 @@ p {
 }
 
 .como__p {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	text-align: justify;
+	font-family: Helvetica;
 }
 .texto{
 	width: 36rem;
@@ -363,6 +364,11 @@ p {
 	word-wrap: break-word;
 	word-break: break-word;
 }
+.grilo_carteiro_11 {
+	width: 15rem;
+	animation: side 2s infinite linear;
+}
+
 @media screen and (max-width: 1086px) {
 	.como__p br {
 		display: none;
@@ -380,7 +386,9 @@ p {
 }
 
 /* ================ BORA / FORM================ */
-
+.boraform{
+	background-color: #B9C300;
+}
 .boraform__container{
 	grid-template-columns: repeat(2, max-content);
 	align-items: start;
@@ -434,7 +442,7 @@ p {
 	font-size: 1.4rem;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
-	font-family: "Trade Gothic LT Std Extended";
+	font-family: Helvetica;
 }
 
 @media screen and (max-width: 1086px) {
@@ -508,12 +516,12 @@ p {
 .form__fill {
 	background: #fff;
 	border-radius: 1rem;
-	box-shadow: 0 8px 56px #00000015;
+	box-shadow: 3px 5px 5px 6px #00000015;
 	padding: 2rem 3rem;
 }
 
 .form__label {
-	font-family: "Trade Gothic LT Std Extended";
+	font-family: Helvetica;
 	font-size: 1rem;
 }
 
@@ -524,7 +532,7 @@ p {
 	padding: .5rem .5rem;
 	margin-top: .2rem;
 	margin-bottom: .5rem;
-	font-family: "Trade Gothic LT Std";
+	font-family: Helvetica;
 	font-size: 1rem;
 }
 
@@ -543,7 +551,7 @@ p {
 	text-decoration: none;
 	font-size: 1.25rem;
 	grid-column: 1/6;
-	font-family: "Trade Gothic LT Std Extended";
+	font-family: Helvetica;
 	padding: 0.7rem 1rem;
 	display: flex;
 	justify-content: space-between;
@@ -662,19 +670,18 @@ p {
 /* ================ PARTICIPE ================ */
 
 .participe {
-	padding: 3rem 0;
+	padding: 2rem;
 	background-color: #000;
 }
 
 .participe__container {
 	grid-template-columns: repeat(12, 1fr);
-	height: 30vh;
+	height: 10vh;
 	justify-content: center;
 	align-items: center;
 }
 
 .participe__box {
-	padding: 0.8rem 0;
 	grid-column: 2/12;
 	
 }
@@ -683,10 +690,7 @@ p {
 	font-size: 1.6875rem;
 	color: #fff;
 	text-align: center;
-}
-
-.participe__p strong {
-	font-family: "Trade Gothic LT Std Extended";
+	font-family: Helvetica;
 }
 
 @media screen and (max-width: 1086px) {
@@ -769,13 +773,15 @@ p {
 
 .sent__modal {
 	position: fixed;
+	justify-content: center;
+	align-items: center;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	background: white;
 	display: block;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
 	padding: 0 1rem;
 	z-index: 1000;
 	opacity: 0;
@@ -798,6 +804,7 @@ p {
 		rgba(181, 189, 0, 1) 40%
 	);
 	padding: 7rem 0;
+	margin: 8rem auto;
 }
 
 .sent__modal-close {
